@@ -47,3 +47,20 @@ const perguntas = [
         ]
     }
 ];
+let atual = 0;
+let perguntaAtual;
+let historiaFinal = "";
+ 
+function mostraPerguunta(){
+    if (atual >= perguntas.length){
+        mostraResultado();
+        return;
+    }
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "";
+    textoResultado.textContent = "";
+    mostraAltertivas();
+}
+function mostraAltertivas(){
+    
